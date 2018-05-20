@@ -11,8 +11,21 @@ module.exports = {
     publicPath: outputDir,
     filename: "app.js"
   },
+  module: {
+    rules: [
+      {
+        test: /index\.html$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: { name: "[name].[ext]" }
+          }
+        ]
+      }
+    ]
+  },
   devServer: {
-    contentBase: path.join(__dirname, "build"),
+    contentBase: outputDir,
     compress: true,
     port: 9000,
     historyApiFallback: true

@@ -1,3 +1,5 @@
+[%bs.raw {|require('../../../src/index.html')|}];
+
 ReactDOMRe.renderToElementWithId(<Main />, "main");
 
 /* Initial URL sync, courtesy of
