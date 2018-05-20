@@ -1,3 +1,5 @@
-ReactDOMRe.renderToElementWithId(<Component1 message="Hello!" />, "index1");
+ReactDOMRe.renderToElementWithId(<Main />, "main");
 
-ReactDOMRe.renderToElementWithId(<Component2 greeting="Hello!" />, "index2");
+/* Initial URL sync, courtesy of
+   https://medium.com/@Hehk/routing-in-reasonreact-d512fdc81b63 */
+ReasonReact.Router.push("");
