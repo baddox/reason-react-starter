@@ -39,8 +39,10 @@ let make = _children => {
     <div>
       <h1> (ReasonReact.string("My Reason React Starter App!")) </h1>
       <menu>
-        <li> <Link path="/"> (ReasonReact.string("Home")) </Link> </li>
-        <li> <Link path="about"> (ReasonReact.string("About")) </Link> </li>
+        <li> <Link path="/"> ...(ReasonReact.string("Home")) </Link> </li>
+        <li>
+          <Link path="about"> ...(ReasonReact.string("About")) </Link>
+        </li>
       </menu>
       <hr />
       <div>

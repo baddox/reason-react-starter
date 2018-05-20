@@ -46,8 +46,7 @@ let make = (~path, children) => {
   ],
   render: self =>
     switch (self.state.routeStatus) {
-    | Active =>
-      <a href=path onClick=(handleClick(path))> <b> children </b> </a>
+    | Active => <b> children </b>
     | Inactive => <a href=path onClick=(handleClick(path))> children </a>
     },
 };
