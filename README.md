@@ -29,23 +29,17 @@ instructions after [creating a new repo](https://github.com/new)).
 
 # Development
 
-Run the following three tasks in three separate tabs (and keep them running).
+Run the following two tasks in two separate tabs (and keep them running).
 
-* Run BuckleScript to compile ReasonML `.re` files to JavaScript (the `.js`
-  files get put in `lib/js/src/` and are git ignored):
+* Run BuckleScript to watch ReasonML `.re` files for changes and compile them to
+  JavaScript (the `.js` files get put in `lib/js/src/` and are git ignored):
 
   ```
   yarn run start
   ```
 
-* Run webpack to compile the JavaScript files into one bundle (at
-  `build/app.js`):
-
-  ```
-  yarn run webpack
-  ```
-
-* Run the webpack dev server to serve up your web app locally:
+* Run the webpack dev server to watch JavaScript files in `lib/js/src/` for
+  changes and compile them into one bundle (at `build/app.js`):
 
   ```
   yarn run dev
@@ -61,8 +55,8 @@ files in the `build/` directory.
 
 # Todo
 
-* Consolidate the three crazy npm tasks into just one (presumably the webpack
-  dev server).
+* Consolidate the BuckleScript and webpack npm tasks into just one (presumably
+  get webpack to do it all?) dev server).
 * Figure out how to require and build CSS (eject reason-scripts and see how they
   do it in their webpack config).
 * Figure out Yeoman or something to allow "forking" this starter project into
