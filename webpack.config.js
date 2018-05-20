@@ -1,5 +1,5 @@
 const path = require("path");
-const outputDir = path.join(__dirname, "build/");
+const outputDir = path.join(__dirname, "build");
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -9,6 +9,12 @@ module.exports = {
   output: {
     path: outputDir,
     publicPath: outputDir,
-    filename: "Index.js"
+    filename: "app.js"
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "build"),
+    compress: true,
+    port: 9000,
+    historyApiFallback: true
   }
 };
